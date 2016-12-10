@@ -1,0 +1,212 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: lato;
+    font-weight: 400
+}
+
+#header {
+    h1 {
+        font-size: 2.1em;
+        text-transform: uppercase;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.strict-slide {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 37.5em;
+    text-align: center;
+    background: url("../images/background.png") center/cover no-repeat;
+    color: #ffffff;
+    h1 {
+        margin: 0 auto;
+        border-bottom: 1px solid #15a4fa;
+        font-size: 8.57em;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.42em;
+    }
+    .call {
+        display: flex;
+        justify-content: center;
+    }
+    .btn-strict-slide {
+        background-color: transparent;
+        color: #ffffff;
+        display: block;
+        border: 1px solid #15a4fa;
+    }
+    a {
+        color: #ffffff;
+        padding-bottom: 50px;
+    }
+}
+
+.container-simple {
+    .container {
+        text-align: center;
+        background-color: #f6f9f9;
+        h2 {
+            padding-top: 61px;
+            color: #2d3950;
+            font-size: 2.86em;
+        }
+        p {
+            padding-bottom: 80px;
+            padding-top: 21px;
+            font-size: 1.43em;
+            line-height: 2.29em;
+            color: #999;
+        }
+    }
+}
+
+.container-optimized {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .row {
+        padding: 0;
+        .col-optimized {
+            padding-top: 15px;
+            list-style-type: none;
+            h3 {
+                color: #2d3950;
+                font-size: 1.56em;
+                font-weight: 400;
+            }
+            p {
+                color: #999;
+                font-size: 1.1em;
+                line-height: 1.57em;
+            }
+            .icon-border {
+                display: inline-block;
+                background: -webkit-linear-gradient(left, #48baff 50%, #5fc3ff 50%);
+                border-radius: 2px;
+                width: 100px;
+                padding: 15px;
+                .fa {
+                    color: white;
+                    font-size: 5em;
+                }
+            }
+        }
+    }
+}
+
+.container-image {
+    text-align: center;
+    background-color: #f6f9f9;
+    h3 {
+        color: #2d3950;
+        font-size: 2.93em;
+    }
+    p {
+        color: #909090;
+        font-size: 1.1em;
+        font-weight: 400;
+        line-height: 1.64em;
+    }
+    .img-col {
+        padding: 15px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.container-form {
+    background: url("../images/bg-form.png") 50% no-repeat;
+    background-size: cover;
+}
+
+.container-form-hover {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #2d3950;
+    padding-top: 50px;
+    padding-bottom: 110px;
+    .container {
+        text-align: center;
+        .stay {
+            color: #ffffff;
+            font-size: 2.93em;
+        }
+        p {
+            color: #999;
+            font-size: 1.07em;
+            line-height: 1.64em;
+        }
+        .form-group {
+            input, textarea, .form-control {
+                background-color: transparent;
+                color: #999;
+                font-size: 1.07em;
+            }
+            label {
+                color: #ffffff;
+                font-size: 0.786em;
+            }
+            .btn-container-form {
+                background-color: transparent;
+                border: 1px solid #15a4fa;
+                border-radius: 2px;
+                color: white;
+                font-size: 1.286em;
+            }
+
+            &:last-child {
+
+                text-align: left;
+            }
+        }
+    }
+}
+
+#footer {
+    text-align: justify;
+    padding: 2.714em 10px;
+    span {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .icon {
+        display: inline-block;
+        width: 40px;
+        line-height: 40px;
+        background-color: #15a4fa;
+        border-radius: 2px;
+        a {
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+    }
+}
+
+
+@media (min-width: 0) and (max-width: 576px) {
+    body {
+        font-size: 10px;
+    }
+    .strict-slide {
+        padding-left: 15px;
+        padding-right: 15px;
+        p {
+            line-height: 20px;
+        }
+    }
+}
