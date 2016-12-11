@@ -3,8 +3,9 @@ html {
 }
 
 body {
-    font-family: lato;
-    font-weight: 400
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #f6f9f9;
 }
 
 #header {
@@ -18,17 +19,16 @@ body {
 }
 
 .strict-slide {
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    min-height: 37.5em;
+    min-height: calc(100vh - 68px);
+    padding: 5% 0;
     text-align: center;
     background: url("../images/background.png") center/cover no-repeat;
     color: #ffffff;
     h1 {
-        margin: 0 auto;
-        border-bottom: 1px solid #15a4fa;
+        display: inline-block;
+        margin: 5% auto 5%;
+        padding: 0 5%;
+        border-bottom: 2px solid #15a4fa;
         font-size: 8.57em;
         text-transform: uppercase;
     }
@@ -36,25 +36,27 @@ body {
         font-size: 1.42em;
     }
     .call {
-        display: flex;
-        justify-content: center;
+        text-align: center;
+        font-size: 2em;
+        //padding: 5% 0;
     }
     .btn-strict-slide {
         background-color: transparent;
         color: #ffffff;
-        display: block;
         border: 1px solid #15a4fa;
+        margin-bottom: 10%;
     }
     a {
         color: #ffffff;
-        padding-bottom: 50px;
+        .fa {
+            font-size: 1.5em;
+        }
     }
 }
 
 .container-simple {
     .container {
         text-align: center;
-        background-color: #f6f9f9;
         h2 {
             padding-top: 61px;
             color: #2d3950;
@@ -63,18 +65,18 @@ body {
         p {
             padding-bottom: 80px;
             padding-top: 21px;
-            font-size: 1.43em;
-            line-height: 2.29em;
+            font: 1.43em/2.29em Lato;
             color: #999;
         }
     }
 }
 
 .container-optimized {
+    background-color: #ffffff;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    .row {
+    .row-optimized {
         padding: 0;
         .col-optimized {
             padding-top: 15px;
@@ -82,16 +84,18 @@ body {
             h3 {
                 color: #2d3950;
                 font-size: 1.56em;
-                font-weight: 400;
             }
             p {
                 color: #999;
-                font-size: 1.1em;
-                line-height: 1.57em;
+                font: 1.1em/1.57em Lato;
             }
             .icon-border {
                 display: inline-block;
+                background: #48baff;
                 background: -webkit-linear-gradient(left, #48baff 50%, #5fc3ff 50%);
+                background: -o-linear-gradient(left, #48baff 50%, #5fc3ff 50%);
+                background: -moz-linear-gradient(left, #48baff 50%, #5fc3ff 50%);
+                background: linear-gradient(left, #48baff 50%, #5fc3ff 50%);
                 border-radius: 2px;
                 width: 100px;
                 padding: 15px;
@@ -106,22 +110,21 @@ body {
 
 .container-image {
     text-align: center;
-    background-color: #f6f9f9;
-    h3 {
-        color: #2d3950;
-        font-size: 2.93em;
-    }
-    p {
-        color: #909090;
-        font-size: 1.1em;
-        font-weight: 400;
-        line-height: 1.64em;
-    }
-    .img-col {
-        padding: 15px;
-        img {
-            width: 100%;
-            height: auto;
+    .container{
+        h3 {
+            color: #2d3950;
+            font-size: 2.93em;
+        }
+        p {
+            color: #909090;
+            font: 1.1em/1,64em Lato;
+        }
+        .img-col {
+            padding: 15px;
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }
@@ -140,16 +143,18 @@ body {
     padding-bottom: 110px;
     .container {
         text-align: center;
-        .stay {
+        h2 {
             color: #ffffff;
             font-size: 2.93em;
         }
         p {
             color: #999;
-            font-size: 1.07em;
-            line-height: 1.64em;
+            font: 1.07em/1.64em Lato;
         }
-        .form-group {
+        ul {
+            padding-left: 0;
+        }
+        .form-strict {
             input, textarea, .form-control {
                 background-color: transparent;
                 color: #999;
@@ -205,8 +210,20 @@ body {
     .strict-slide {
         padding-left: 15px;
         padding-right: 15px;
+        font-size: 8px;
         p {
             line-height: 20px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .strict-slide {
+        font-size: 14px;
+        .call {
+            padding: 5% 0;
+            .btn-strict-slide {
+                font-size: 1em;
+            }
         }
     }
 }
