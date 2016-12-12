@@ -121,14 +121,29 @@ body {
         }
         .img-col {
             padding: 15px;
+            border-radius: 2px;
+            .overlay {
+                display: none;
+            }
             img {
                 width: 100%;
                 height: auto;
             }
+            &:hover {
+                .overlay {
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    left:15px;
+                    right:15px;
+                    bottom:15px;
+                    opacity: 0.9;
+                    background-color: #15a4fa;
+                }
+            }
         }
     }
 }
-
 .container-form {
     background: url("../images/bg-form.png") 50% no-repeat;
     background-size: cover;
