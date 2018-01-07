@@ -38,16 +38,22 @@ body {
     .call {
         text-align: center;
         font-size: 2em;
-        //padding: 5% 0;
     }
     .btn-strict-slide {
+        margin-bottom: 15%;
         background-color: transparent;
         color: #ffffff;
         border: 1px solid #15a4fa;
-        margin-bottom: 10%;
+        &:hover{
+          background-color: #15a4fa;
+          list-style-type: none;
+        }
+    }
+    .button-move {
     }
     a {
         color: #ffffff;
+        font-size: 1.5em;
         .fa {
             font-size: 1.5em;
         }
@@ -123,7 +129,14 @@ body {
             padding: 15px;
             border-radius: 2px;
             .overlay {
-                display: none;
+                opacity: 0;
+                transition: all 0.3s ease;
+                display: block;
+                position: absolute;
+                top: 15px;
+                left:15px;
+                right:15px;
+                bottom:15px;
             }
             img {
                 width: 100%;
@@ -131,12 +144,6 @@ body {
             }
             &:hover {
                 .overlay {
-                    display: block;
-                    position: absolute;
-                    top: 15px;
-                    left:15px;
-                    right:15px;
-                    bottom:15px;
                     opacity: 0.9;
                     background-color: #15a4fa;
                 }
@@ -168,6 +175,7 @@ body {
         }
         ul {
             padding-left: 0;
+            list-style-type: none;
         }
         .form-strict {
             input, textarea, .form-control {
@@ -228,8 +236,15 @@ body {
         font-size: 8px;
         p {
             line-height: 20px;
+            font-size: 1.8em;
         }
+      .btn-strict-slide {
+        margin-bottom: 40%;
     }
+    h1 {
+      margin: 25% auto 15%;
+    }
+  }
 }
 @media (min-width: 576px) and (max-width: 768px) {
     .strict-slide {
@@ -241,4 +256,10 @@ body {
             }
         }
     }
+  .strict-slide {
+    min-height: calc(100vh - 68px);
+    h1 {
+      margin: 25% auto 25%;
+    }
+  }
 }

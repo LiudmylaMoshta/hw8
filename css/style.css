@@ -31,12 +31,16 @@ body {
     text-align: center;
     font-size: 2em; }
   .strict-slide .btn-strict-slide {
+    margin-bottom: 15%;
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #15a4fa;
-    margin-bottom: 10%; }
+    border: 1px solid #15a4fa; }
+    .strict-slide .btn-strict-slide:hover {
+      background-color: #15a4fa;
+      list-style-type: none; }
   .strict-slide a {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 1.5em; }
     .strict-slide a .fa {
       font-size: 1.5em; }
 
@@ -94,17 +98,18 @@ body {
     padding: 15px;
     border-radius: 2px; }
     .container-image .container .img-col .overlay {
-      display: none; }
-    .container-image .container .img-col img {
-      width: 100%;
-      height: auto; }
-    .container-image .container .img-col:hover .overlay {
+      opacity: 0;
+      transition: all 0.3s ease;
       display: block;
       position: absolute;
       top: 15px;
       left: 15px;
       right: 15px;
-      bottom: 15px;
+      bottom: 15px; }
+    .container-image .container .img-col img {
+      width: 100%;
+      height: auto; }
+    .container-image .container .img-col:hover .overlay {
       opacity: 0.9;
       background-color: #15a4fa; }
 
@@ -128,7 +133,8 @@ body {
       color: #999;
       font: 1.07em/1.64em Lato; }
     .container-form-hover .container ul {
-      padding-left: 0; }
+      padding-left: 0;
+      list-style-type: none; }
     .container-form-hover .container .form-strict input, .container-form-hover .container .form-strict textarea, .container-form-hover .container .form-strict .form-control {
       background-color: transparent;
       color: #999;
@@ -165,19 +171,26 @@ body {
 @media (min-width: 0) and (max-width: 576px) {
   body {
     font-size: 10px; }
-
   .strict-slide {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 8px; }
     .strict-slide p {
-      line-height: 20px; } }
+      line-height: 20px;
+      font-size: 1.8em; }
+    .strict-slide .btn-strict-slide {
+      margin-bottom: 40%; }
+    .strict-slide h1 {
+      margin: 25% auto 15%; } }
+
 @media (min-width: 576px) and (max-width: 768px) {
   .strict-slide {
     font-size: 14px; }
     .strict-slide .call {
       padding: 5% 0; }
       .strict-slide .call .btn-strict-slide {
-        font-size: 1em; } }
-
-/*# sourceMappingURL=style.css.map */
+        font-size: 1em; }
+  .strict-slide {
+    min-height: calc(100vh - 68px); }
+    .strict-slide h1 {
+      margin: 25% auto 25%; } }
